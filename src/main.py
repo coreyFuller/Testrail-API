@@ -1,10 +1,11 @@
 from testrail import *
-from json import loads
+from functions import *
 
-creds = open("../config.json").read()
-config = loads(creds)
-print(config)
-client = APIClient(config["server"])
-client.user = config["user"]
-client.password = config["password"]
+projects = getProjects()
+for project in projects:
+    id = project["id"]
+    print(getProject(id))
+
+pass
+
 
