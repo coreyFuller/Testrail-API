@@ -7,6 +7,10 @@ def main():
     for project in projects:
         id = project["id"]
         print(getProject(id))
+        acive_runs = getActiveRuns(id)
+        reports = getReports(id)
+        cases = getCases(id)
+        pass
     pass
 
 

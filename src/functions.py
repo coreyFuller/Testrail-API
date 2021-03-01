@@ -12,3 +12,12 @@ def getProjects():
 
 def getProject(projectID = None):
     return client.send_get("get_project/" + str(projectID))
+
+def getActiveRuns(projectID = None):
+    return client.send_get("get_plans/" + str(projectID) + "&is_completed=0")
+
+def getReports(projectID = None):
+    return client.send_get("get_reports/" + str(projectID))
+
+def getCases(projectID=None):
+    return client.send_get("get_cases/" + str(projectID))
