@@ -19,5 +19,8 @@ def getActiveRuns(projectID = None):
 def getReports(projectID = None):
     return client.send_get("get_reports/" + str(projectID))
 
-def getCases(projectID=None):
-    return client.send_get("get_cases/" + str(projectID))
+def getCases(projectID=None, suiteID=None):
+    return client.send_get(f"get_cases/{projectID}&suite_id={suiteID}")
+
+def getSuites(projectID=None):
+    return client.send_get("get_suites/" + str(projectID))
