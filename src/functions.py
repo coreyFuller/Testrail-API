@@ -1,5 +1,6 @@
 from testrail import *
 from json import loads
+import asyncio
 
 creds = open("config.json").read()
 config = loads(creds)
